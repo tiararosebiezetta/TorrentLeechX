@@ -1,9 +1,5 @@
 git clone https://github.com/tiararosebiezetta/TorrentLeechX app
 cd app
 
-if [[ -n $RCLONE_CONFIG ]]; then
- echo "Rclone config detected"
- echo -e "$RCLONE_CONFIG" > /app/rclone.conf
-fi
-
-bash setup.sh; python3 -m tobrot
+bash setup.sh; python3 clever.py &
+python3 -m tobrot
